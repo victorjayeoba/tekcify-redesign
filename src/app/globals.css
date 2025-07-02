@@ -1,0 +1,95 @@
+/* Satoshi Font */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Black.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+.l_cursor{
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.s_cursor{
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --purple-primary: #7C3AED;
+  --purple-light: #A78BFA;
+  --heading-gray: #e2e2e2;
+  --font-sans: 'Satoshi', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+}
+a , button , Link{
+  cursor: pointer;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, sans-serif);
+}
+
+.text-heading-gray {
+  color: var(--heading-gray);
+}
+
+/* Pixel Pattern Background */
+.bg-pixel-pattern {
+  background-color: white;
+  background-image: 
+    radial-gradient(#f0f0f0 1px, transparent 1px),
+    radial-gradient(#f0f0f0 1px, transparent 1px);
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+/* Create a cross/plus pattern background */
+.bg-cross-pattern {
+  background-color: white;
+  background-image: 
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+  opacity: 0.3;
+}
+
+/* Tight heading text */
+h1.font-satoshi {
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}

@@ -177,13 +177,31 @@ const Technology = () => {
                 </span>
                 <div className="flex -space-x-2 mr-4">
                   <span className="inline-block w-8 h-8 rounded-full border-2 border-black overflow-hidden">
-                    <img src="https://tekcify.com/assets/henry.svg" alt="Community member" className="w-full h-full object-cover" />
+                    <Image
+                      src="https://tekcify.com/assets/henry.svg"
+                      alt="Community member"
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
                   </span>
                   <span className="inline-block w-8 h-8 rounded-full border-2 border-black overflow-hidden">
-                    <img src="https://tekcify.com/assets/muniz.svg" alt="Community member" className="w-full h-full object-cover" />
+                    <Image
+                      src="https://tekcify.com/assets/muniz.svg"
+                      alt="Community member"
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
                   </span>
                   <span className="inline-block w-8 h-8 rounded-full border-2 border-black overflow-hidden">
-                    <img src="https://tekcify.com/assets/sarah.svg" alt="Community member" className="w-full h-full object-cover" />
+                    <Image
+                      src="https://tekcify.com/assets/sarah.svg"
+                      alt="Community member"
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
                   </span>
                  
                 </div>

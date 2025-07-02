@@ -1,15 +1,12 @@
 "use client";
 
-import Image from 'next/image';
-
 interface ProductCardProps {
   title: string;
   description: string;
-  bgColor: string;
   logoSrc: string;
 }
 
-const ProductCard = ({ title, description, bgColor, logoSrc }: ProductCardProps) => {
+const ProductCard = ({ title, description, logoSrc }: ProductCardProps) => {
   return (
     <div
       className={`rounded-2xl p-10 relative overflow-hidden h-[380px] flex flex-col group`}
@@ -58,21 +55,18 @@ const Products = () => {
           <ProductCard 
             title="Binx AI" 
             description="WhatsApp AI assistant for for daily tasks." 
-            bgColor="bg-purple-700" 
             logoSrc="/images/logos/binx-logo.webp" 
           />
           
           <ProductCard 
             title="PDFX" 
             description="AI-powered document analysis and extraction" 
-            bgColor="bg-emerald-800" 
             logoSrc="/images/logos/pdfx-logo.webp" 
           />
           
           <ProductCard 
             title="Campux" 
             description="Smart social platform for students" 
-            bgColor="bg-purple-900" 
             logoSrc="/images/logos/campux-logo.webp" 
           />
         </div>

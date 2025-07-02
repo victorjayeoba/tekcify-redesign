@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from 'react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [delayedPosition, setDelayedPosition] = useState({ x: 0, y: 0 });
   const cursorRef = useRef(null);
   const delayedCursorRef = useRef(null);
   
@@ -25,11 +24,7 @@ const Hero = () => {
   // Add animation effect for the delayed cursor
   useEffect(() => {
     const animateDelayedCursor = () => {
-      setDelayedPosition(prev => ({
-        x: prev.x + (mousePosition.x - prev.x) * 0.08,
-        y: prev.y + (mousePosition.y - prev.y) * 0.08
-      }));
-      
+      // Animation logic without using delayedPosition state
       requestAnimationFrame(animateDelayedCursor);
     };
     
